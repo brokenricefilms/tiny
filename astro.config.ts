@@ -7,7 +7,7 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.thuanowa.com",
+  site: "https://thuanowa.com",
   build: {
     format: "file",
   },
