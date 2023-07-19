@@ -14,18 +14,18 @@ interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Thuan Pham",
+	author: "thuanowa",
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "thuanowa",
 	// Meta property used as a default description meta property
-	description: "thuanowa website blog",
+	description: "thuanowa blog links website",
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
 	ogLocale: "en_GB",
 	// Sets the meta data theme-color, found in src/components/BaseHead.astro L:34. Toggling the dark mode will update the meta content with either light/dark color, implementation in src/layouts/Base.astro L:41.
-	themeColorLight: "ffffff",
-	themeColorDark: "121212",
+	themeColorLight: "#faf4ed",
+	themeColorDark: "#191724",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
 		locale: "en-GB",

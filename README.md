@@ -1,3 +1,6 @@
-# Tiny
+<https://thuanowa.com>
 
-Thanks: <https://github.com/chrismwilliams/astro-theme-cactus>
+todo:
+
+- update astro theme to version 2.6.0
+- rose pine theme

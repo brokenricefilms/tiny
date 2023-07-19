@@ -5,27 +5,172 @@ import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
 import { sortMDByDate } from "@/utils";
 
+import { Image } from "astro:assets";
+import thuanowaFace from "/public/thuanowa-face.png";
+
 const MAX_POSTS = 10;
 const allPosts = await getCollection("post");
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+
+const meta = {
+	title: "thuanowa",
+	description: "thuanowa website",
+};
 ---
 
-<PageLayout meta={{ title: "Home" }}>
+<PageLayout meta={meta}>
+	<style>
+		.fast {
+			background-image: linear-gradient(45deg, #000000, #000000 30%, #ffffff 60%);
+			background-size: 200% auto;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation: textclip 0.1s linear infinite;
+		}
+		@keyframes textclip {
+			to {
+				background-position: 200% center;
+			}
+		}
+	</style>
 	<section>
 		<h1 class="title mb-6">Yo!</h1>
-		<p class="mb-4">I'm making the internet more beautiful and blazingly fast.</p>
-		<SocialList />
+		<div class="space-y-6">
+			<p>Here my face:</p>
+			<Image
+				src={thuanowaFace}
+				width={200}
+				format={"avif"}
+				alt="thuan pham aka thuanowa face"
+				loading="eager"
+			/>
+			<SocialList />
+			<p>
+				Here is my resume: <a
+					class="cactus-link inline-block"
+					href="https://docs.google.com/document/d/1vLrTNjnHL_zEaVJs61mfBKhwc7vHxHvokx3cJpmQnok"
+					>https:/l.thuanowa.com/resume</a
+				>
+			</p>
+			<p>
+				I usually make video in my daily life as <a
+					class="cactus-link inline-block"
+					href="https://youtube.com/@thuanowa">youtube.com/@thuanowa</a
+				>
+			</p>
+			<ul>
+				<strong>Bio</strong>
+				<li>
+					Dead: <a href="https://last-will.thuanowa.com" class="cactus-link inline-block"
+						>last-will.thuanowa.com</a
+					>
+				</li>
+				<li>2023+: Finding the front-end dev internship</li>
+				<li>2019-2023: Studing in Saigon Technology University</li>
+				<li>
+					2018: Start make making video on youtube <a
+						href="https://www.youtube.com/@thuanowa"
+						class="cactus-link inline-block">https://www.youtube.com/@thuanowa</a
+					>
+				</li>
+				<li>
+					2007-2019: Spent 12 years study in Nguyễn Văn Trân Primary School, Đa Phước Middle School
+					and Đa Phước High School
+				</li>
+				<li>2001: Born in Ho Chi Minh city, Vietnam</li>
+			</ul>
+
+			<ul>
+				<strong>Likes</strong>
+				<li>Making things beautiful and blazingly <span class="fast">fast</span></li>
+				<li>Cycling</li>
+				<li>
+					<a
+						href="https://www.youtube.com/playlist?list=PLcazFfFZIFPmN5m921xHh9mE08WB3Uldv"
+						class="cactus-link inline-block">Cooking</a
+					>
+				</li>
+				<li>Playing with my dog</li>
+				<li></li>
+			</ul>
+		</div>
+	</section>
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">Links</h2>
+		<ul class="space-y-4 sm:space-y-2">
+			<li>
+				<a
+					href="https://pay.thuanowa.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Payment
+				</a>
+				<p class="inline-block italic text-gray-500 sm:mt-2">*Help me pay my water bill</p>
+			</li>
+			<li>
+				<a
+					href="https://l.thuanowa.com/resume"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Resume
+				</a>
+				<p class="inline-block italic text-gray-500 sm:mt-2">
+					*I am currently looking for a Front-end Intern position in Ho Chi Minh City or remotely.
+				</p>
+			</li>
+			<li>
+				<a
+					href="https://l.thuanowa.com/photos"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Photos
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://l.thuanowa.com/music"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Music i like
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://m.me/thuanowa"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>Chat with me
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://l.thuanowa.com/calendar"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					>My schedule
+				</a>
+			</li>
+		</ul>
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
+		<a href="/posts">
+			<h2 class="title mb-4 text-xl">Posts</h2>
+		</a>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-x-2 sm:flex-row">
-						<PostPreview post={p} />
+					<li class="flex flex-wrap items-center gap-x-2 [&_q]:w-full">
+						<PostPreview post={p} as="h2" />
 					</li>
 				))
 			}
 		</ul>
+		<a href="/posts" class="cactus-link italic">see more</a>
 	</section>
 </PageLayout>

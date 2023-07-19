@@ -1,21 +1,21 @@
 {
-  "name": "thuanowa website",
-  "short_name": "thuanowa",
-  "description": "thuanowa blog website",
-  "icons": [
-    {
-      "src": "/192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "start_url": "/",
-  "background_color": "#ffffff",
-  "theme_color": "#121212",
-  "display": "standalone"
+	"name": "thuanowa website",
+	"short_name": "thuanowa",
+	"description": "thuanowa blog website",
+	"icons": [
+		{
+			"src": "/192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#ffffff",
+	"theme_color": "#121212",
+	"display": "standalone"
 }
