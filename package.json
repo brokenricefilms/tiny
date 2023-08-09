@@ -48,7 +48,6 @@
     "@astrojs/rss": "^2.4.3",
     "@fontsource/jetbrains-mono": "^4.5.12",
     "astro": "2.7.1",
-    "astro-compress": "^1.1.50",
     "satori": "0.10.1",
     "satori-html": "^0.3.2",
     "sharp": "^0.32.4"
