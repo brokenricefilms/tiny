@@ -1,4 +1,4 @@
 <https://thuanowa.com>
 
 To-do:
-- update theme version to 2.8.0
+- update theme version to 2.8.2
