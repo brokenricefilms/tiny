@@ -19,7 +19,7 @@ Bà con bị **sang chấn tâm lý** sau khi học **chủ nghĩa mác lê-n
 
 Hôm nay các anh em sẽ hiểu được **học triết học làm cái méo gì?**
 
-### **VẬY HỌC TRIẾT HỌC LÀM CÁI MÉO GÌ?**
+## **VẬY HỌC TRIẾT HỌC LÀM CÁI MÉO GÌ?**
 
 Với gốc nhìn của tui được truyền đạo từ anh vui lên,
 
@@ -27,7 +27,7 @@ Bản chất của triết học là giúp con người trở nên tốt hơn.
 
 Từ đó học và vận dụng triết học giúp cuộc sống ta vui hơn.
 
-### **CHỦ NGHĨA KHẮC KỈ LÀ CÁI MÉO GÌ?**
+## **CHỦ NGHĨA KHẮC KỈ LÀ CÁI MÉO GÌ?**
 
 Chủ nghĩa khắc kỷ là một trường phái triết học Hy Lạp cổ đại do Zeno thành
 Citium sáng lập ra tại Athens vào đầu thế kỷ thứ 3 TCN, là một nhánh triết học
@@ -36,7 +36,7 @@ bản chất thế giới. —wikipedia
 
 Tóm cái vấy lại là một phong cách sống giúp bạn bình an, tịnh tâm.
 
-### **ỨNG DỤNG THẾ MÉO NÀO?**
+## **ỨNG DỤNG THẾ MÉO NÀO?**
 
 Tui sẽ moi ra phần tui thấy hay nhất trong chủ nghĩa khắc kỉ,
 
