@@ -1,13 +1,11 @@
 ---
-import type { SiteMeta } from "@/data/siteMeta";
+import type { SiteMeta } from "@/data/types";
 import BaseHead from "@/components/BaseHead";
 import ThemeProvider from "@/components/ThemeProvider";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
 import { siteConfig } from "@/site-config";
-
-import "@fontsource/jetbrains-mono";
 
 interface Props {
 	meta: SiteMeta;
@@ -21,11 +19,6 @@ const {
 <html lang={siteConfig.lang}>
 	<head>
 		<BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
-		<style>
-			body {
-				font-family: "JetBrains Mono", monospace;
-			}
-		</style>
 	</head>
 	<body>
 		<ThemeProvider />
