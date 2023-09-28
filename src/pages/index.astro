@@ -8,7 +8,7 @@ import { sortMDByDate } from "@/utils";
 import { Image } from "astro:assets";
 import thuanowaFace from "/public/thuanowa-face.png";
 
-const MAX_POSTS = 10;
+const MAX_POSTS = 99999;
 const allPosts = await getCollection("post");
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
@@ -22,11 +22,10 @@ const meta = {
 	<section>
 		<h1 class="title mb-6">Yo!</h1>
 		<div class="space-y-6">
-			<p>Here my face:</p>
 			<Image
 				src={thuanowaFace}
-				width={200}
-				format={"avif"}
+				width={250}
+				format={"png"}
 				alt="thuan pham aka thuanowa face"
 				loading="eager"
 			/>
