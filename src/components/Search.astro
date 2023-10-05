@@ -65,10 +65,13 @@ import "@pagefind/default-ui/css/ui.css";
 			const dialogFrame = this.querySelector(".dialog-frame")!;
 
 			const onWindowClick = (event: MouseEvent) => {
-				// make sure the click is outside the of the dialog
+				// check if it's a link
+				const isLink = "href" in (event.target || {});
+				// make sure the click is either a link or outside of the dialog
 				if (
-					document.body.contains(event.target as Node) &&
-					!dialogFrame.contains(event.target as Node)
+					isLink ||
+					(document.body.contains(event.target as Node) &&
+						!dialogFrame.contains(event.target as Node))
 				)
 					closeModal();
 			};
@@ -81,8 +84,10 @@ import "@pagefind/default-ui/css/ui.css";
 			};
 
 			const closeModal = () => {
-				dialog.close();
-				window.removeEventListener("click", onWindowClick);
+				if (dialog.open) {
+					dialog.close();
+					window.removeEventListener("click", onWindowClick);
+				}
 			};
 
 			openBtn.addEventListener("click", openModal);
@@ -105,10 +110,19 @@ import "@pagefind/default-ui/css/ui.css";
 					new PagefindUI({
 						element: "#cactus__search",
 						baseUrl: import.meta.env.BASE_URL,
-						bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/_pagefind/",
+						bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
 						showImages: false,
+						showSubResults: true,
 					});
 				});
+			});
+
+			// close modal and clear input on view-transtion
+			document.addEventListener("astro:after-swap", () => {
+				// clear the search field
+				(document.querySelector(".pagefind-ui__search-clear") as HTMLButtonElement)?.click();
+				// close the modal & remove event listener on body
+				closeModal();
 			});
 		}
 	}
