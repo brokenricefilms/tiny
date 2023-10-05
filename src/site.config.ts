@@ -42,4 +42,8 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Use",
 		path: "https://use.thuanowa.com/",
 	},
+	{
+		title: "Studios",
+		path: "https://youtube.com/@owastudios",
+	},
 ];
