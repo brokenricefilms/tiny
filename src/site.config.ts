@@ -1,12 +1,12 @@
-import type { SiteConfig } from "@/types";
+import type { SiteConfig } from "@/data/types";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Chris Williams",
+	author: "Thuan Pham",
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: "Astro Theme Cactus",
+	title: "thuanowa",
 	// Meta property used as the default description meta property
-	description: "An opinionated starter theme for Astro",
+	description: "thuanowa blog links website",
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -35,11 +35,11 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		path: "/",
 	},
 	{
-		title: "About",
-		path: "/about/",
+		title: "Posts",
+		path: "/posts/",
 	},
 	{
-		title: "Blog",
-		path: "/posts/",
+		title: "Use",
+		path: "https://use.thuanowa.com/",
 	},
 ];
